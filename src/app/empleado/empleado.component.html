@@ -1,0 +1,33 @@
+
+<!-- Interpolación de variables -->
+<p>Nombre del empleado: {{ nombre }}</p>
+<p>Apellido del empleado: {{ apellido }}</p>
+<p>edad del empleado: {{  getEdad()  }}</p>
+<p>Nombre de la empresa: {{empresa.value}}</p>
+<p>Textodinamico : {{textoDinamico.value }}</p>
+<p>Propety Binding : {{propetyBinding.value }}</p>
+
+<!-- #empresa coge el valor -->
+Introduce la empresa : <input type="text" #empresa>
+<br>
+<input type="button" value="¡Dale!" (click)="llamaEmpresa(empresa.value)"/>
+<br>
+Introduce tú texto : <input type="text" #textoDinamico (keyup)="0">
+<br>
+<br>
+Ejemplo propety bingin : <input type="text" #propetyBinding (keyup)="0" [disabled]="enableBox">
+<br/>
+<br/>
+{{ textRegister }}
+<br/>
+<!-- $event toma el objeto que se crea automaticamente event -->
+Registrado: <input type="radio" value="yes" name="registro" id="registro" [checked]="isRegister" (click)="userRegister($event)"/>
+No registrado: <input type="radio" value="no" name="registro" (click)="userRegister($event)">
+<br>
+<br>
+
+
+
+{{getisRegister()}}
+
+
